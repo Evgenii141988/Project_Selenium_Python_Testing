@@ -12,5 +12,7 @@ class LoginPageLocators():
 
 class ProductPageLocators():
     BUTTON_ADD_BASKET = (By.CSS_SELECTOR, '.btn-add-to-basket')
-    PRODUCT_NAME = (By.CSS_SELECTOR, '.product_main')
+    PRODUCT_NAME = (By.XPATH, '//div[@class="col-sm-6 product_main"]/h1')
     PRODUCT_PRICE = (By.CSS_SELECTOR, '.product_main .price_color')
+    PRODUCT_NAME_IN_BASKET = (By.XPATH, '//div[@class="alertinner "]/strong[1]')
+    PRODUCT_PRICE_IN_BASKET = (By.XPATH, '//div[@class="alertinner "]/p/strong')

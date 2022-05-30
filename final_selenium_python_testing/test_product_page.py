@@ -22,6 +22,7 @@ def test_guest_can_add_product_to_basket(browser, link):
     product_page.solve_quiz_and_get_code()
     product_page.check_message_product_in_basket()
     product_page.check_message_product_price_in_basket()
+    product_page.success_message_should_disappeared()
 
 
 if __name__ == '__main__':

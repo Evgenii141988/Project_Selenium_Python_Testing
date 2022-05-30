@@ -25,5 +25,14 @@ def test_guest_can_add_product_to_basket(browser, link):
     product_page.success_message_should_disappeared()
 
 
+def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):
+    link = 'http://selenium1py.pythonanywhere.com/ru/catalogue/the-shellcoders-handbook_209/'
+    product_page = ProductPage(browser, link)
+    product_page.open()
+    product_page.add_to_basket()
+    product_page.should_not_be_success_message()
+
+
+
 if __name__ == '__main__':
     pytest.main()

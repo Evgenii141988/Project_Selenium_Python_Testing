@@ -61,5 +61,6 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
     page.open()
     page.go_to_login_page()
 
+
 if __name__ == '__main__':
     pytest.main()

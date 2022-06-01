@@ -73,5 +73,23 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     basket_page.should_basket_be_empty()
 
 
+class TestUserAddToBasketFromProductPage():
+    def test_user_cant_see_success_message(self, browser):
+        link = 'http://selenium1py.pythonanywhere.com/ru/catalogue/the-shellcoders-handbook_209/'
+        product_page = ProductPage(browser, link)
+        product_page.open()
+        product_page.should_not_be_success_message()
+
+    def test_user_can_add_product_to_basket(self, browser, link):
+        product_page = ProductPage(browser, link)
+        product_page.open()
+        product_page.should_not_be_success_message()
+        product_page.add_to_basket()
+        product_page.solve_quiz_and_get_code()
+        product_page.check_message_product_in_basket()
+        product_page.check_message_product_price_in_basket()
+        product_page.success_message_should_disappeared()
+
+
 if __name__ == '__main__':
     pytest.main()

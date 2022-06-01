@@ -1,9 +1,8 @@
-from selenium.common.exceptions import NoSuchElementException, NoAlertPresentException, TimeoutException
 import math
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-
-from final_selenium_python_testing.pages.locators import BasePageLocators
+from selenium.common.exceptions import NoSuchElementException, NoAlertPresentException, TimeoutException
+from .locators import BasePageLocators
 
 
 class BasePage():

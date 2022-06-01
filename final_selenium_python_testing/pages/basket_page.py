@@ -1,5 +1,5 @@
-from final_selenium_python_testing.pages.base_page import BasePage
-from final_selenium_python_testing.pages.locators import BasketPageLocators
+from .base_page import BasePage
+from .locators import BasketPageLocators
 
 
 class BasketPage(BasePage):
